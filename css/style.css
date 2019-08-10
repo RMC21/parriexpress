@@ -1,0 +1,140 @@
+.menú {
+    position: fixed;
+    display: table;
+    width: 50vh;
+    height: 100vh;
+    left: 1vh;
+    background-color: transparent;
+    z-index: 10
+}
+
+.menú .franja{
+    position: absolute;
+    width: 30vh;
+    height: 100vh;
+    top: 0;
+    left: 10vh;
+    background-color: red
+}
+
+.menú .franja .nav {
+    position: relative;
+    width: 25vh;
+    padding-top: 55vh;
+    font-size: 4vh;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.menú .franja .nav .nav-link {
+    color: #ffffff;
+    font-weight: 700;
+    display: block;
+    padding: 0 0 2vh 0;
+    transition: all .5s ease-in-out
+}
+
+.menú .franja .nav .nav-link.active {
+    font-size: 1rem
+}
+
+.franja::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2.5%;
+    width: 105%;
+    height: 100%;
+    background-color: rgb(255, 0, 0, .5);
+    z-index: -1;
+}
+
+.logo {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    padding-top: 10vh;
+    z-index: 11;
+    cursor: pointer
+}
+
+.contenido {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: aqua
+}
+
+.carousel-inner, .carousel-item, .view {
+    height: 100vh !important;
+    width: 100%
+}
+
+.imagen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-size: cover;
+    transform: translateZ(0px);
+    opacity: 1;
+    z-index: 1;
+    background-position: center center;
+    transition: all 1s ease-in-out;
+}
+
+#carta.pagina, #restaurante.pagina, #contacto.pagina  {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    transition: all .8s ease-in-out !important;
+    -webkit-transition: all .8s ease-in-out !important;
+    -moz-transition: all .8s ease-in-out !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#carta {
+    background-color: aquamarine
+}
+
+#restaurante {
+    background-color: blue
+}
+
+#contacto {
+    background-color :yellow
+}
+
+#carta.pagina.mostrar, #restaurante.pagina.mostrar, #contacto.pagina.mostrar  {
+    right: 0
+}
+
+.carousel-indicators {
+    z-index: 7
+}
+
+.contenedor {
+    position: absolute;
+    width: calc(100% - 55vh);
+    top:0;
+    right: 0
+}
+
+.datos {
+    padding-top: 10vh
+}
+
+.mapa {
+    height: 100vh;
+    width: 40%;
+}
+
