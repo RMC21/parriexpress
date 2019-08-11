@@ -1,9 +1,18 @@
 $( document ).ready(function() {
 
+    $('.llamar-venezuela').on('click', function(){
+        $('#venezuela').addClass('mostrar-pais');
+        $('.introduccion').addClass('ocultar');     
+    });
+
+    $('.llamar-mexico').on('click', function(){
+        $('#mexico').addClass('mostrar-pais');
+        $('.introduccion').addClass('ocultar');     
+    });
+
     $('.llamar-inicio').on('click', function(){
         $('#carta, #restaurante, #contacto').removeClass('mostrar');
         $('.llamar-carta, .llamar-restaurante, .llamar-contacto').removeClass('active');
-
     });
 
     $('.llamar-carta').on('click', function(){

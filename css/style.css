@@ -30,6 +30,7 @@
 
 .menú .franja .nav .nav-link {
     color: #ffffff;
+    font-size: 4vh;
     font-weight: 700;
     display: block;
     padding: 0 0 2vh 0;
@@ -37,7 +38,17 @@
 }
 
 .menú .franja .nav .nav-link.active {
-    font-size: 1rem
+    font-size: 3vh;
+    opacity: .75;
+}
+
+.menú .franja .nav .nav-link {
+    color: #ffffff;
+    font-size: 4vh;
+    font-weight: 700;
+    display: block;
+    padding: 0 0 2vh 0;
+    transition: all .5s ease-in-out
 }
 
 .franja::before {
@@ -126,12 +137,45 @@
 .contenedor {
     position: absolute;
     width: calc(100% - 55vh);
+    top:0vh;
+    right: 0
+}
+
+#carta .contenedor {
+    top:25vh;
+}
+
+.menú-carta {
+    position: absolute;
+    width: calc(100% - 55vh);
+    text-align: center;
     top:0;
     right: 0
 }
 
+.menú-carta .nav-item {
+    background-color: blueviolet;
+    display: block
+}
+
+.menú-carta .nav-item .nav-link {
+    height: 100%;
+}
+
+.grilla-plato {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.p-plato {
+    padding-top: 10vh
+}
+
 #contacto .contenedor {
     max-height: 100vh;
+    overflow: hidden;
 }
 
 .datos {
@@ -143,3 +187,88 @@
     width: 40%;
 }
 
+.introduccion {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 10vh;
+    text-align: center;
+    background-color: red;
+    overflow: hidden;
+    -webkit-overflow-scrolling: unset;
+    scroll-behavior:unset;
+    overscroll-behavior: unset;
+    z-index: 1080
+}
+
+.introduccion .nav .nav-item .nav-link {
+    font-size: 6vh;
+    font-weight: 500;
+    color: #ffffff;
+    transition: all .5s ease-in-out
+}
+
+.introduccion .nav .nav-item .nav-link:hover {
+    font-size: 7vh;
+}
+
+.introduccion-img {
+    height: 65vh;
+    width: auto
+}
+
+#mexico, #venezuela, .ocultar {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+    transition: all .5s linear
+}
+
+#mexico.mostrar-pais, #venezuela.mostrar-pais {
+    opacity: 1;
+    display: block;
+    visibility: visible
+}
+
+.img-plato {
+    max-width: 60%;
+    height: auto;
+    padding-bottom: 5vh
+}
+
+.mensaje-promo {
+    position: absolute;
+    bottom: 0;
+    right: 10vh;
+    top: 5vh;
+    text-align: right;
+    z-index: 1;
+}
+
+.mensaje-promo h1 {
+    font-size: 7vh
+}
+
+.mensaje-promo h3 {
+    font-size: 5vh
+}
+
+.precio-promo {
+    position: absolute;
+    right: 10vh;
+    bottom: 20vh;
+    text-align: right;
+    line-height: 1;
+    z-index: 1;
+}
+
+.precio-promo h3 {
+    margin: 0;
+    font-size: 5vh
+}
+
+.precio-promo span {
+    font-size: 12vh
+}
